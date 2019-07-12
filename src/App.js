@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import DataTable from './DataElement.js';
+import DataTable from './HomeworkTable';
 
 function App() {
   return (
