@@ -43,12 +43,18 @@ function handleData(response) {
         var tempArray = [recordFields.Headline, recordFields.Date_Due, recordFields.Section, recordFields.Author.name ];
         responseArray.push(tempArray);
     }
-    console.log("Computed array");
-    console.log(responseArray);
-
+    //console.log("Computed array");
+    //console.log(responseArray);
+    return responseArray;
 }
 export function getData(options) {
     options = options || 0;
-    getDataFromAirTable().then(result => {return handleData(result)}).catch(error => console.error(error));
+    var dataArray = "DataArray was not set";
+   return getDataFromAirTable().then(result => {
+        dataArray = handleData(result)
+        return dataArray;
+    }).catch(error =>
+        console.error(error));
+
 
 }
