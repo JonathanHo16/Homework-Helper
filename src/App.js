@@ -22,6 +22,7 @@ function App() {
         </a>
       </header>
       <DataTable/>
+      <p>New Git branch</p>
     </div>
   );
 }
